@@ -18,5 +18,5 @@ for (( i=1; i<=2920; i++ )); do
 
     # Move to the next day
     last_date=$current_date
-    current_date=$(date -j -v +1d -f "%Y-%m-%d" "$current_date" "+%Y-%m-%d")
+    current_date=$(date -d -v +1d -f "%Y-%m-%d" "$current_date" "+%Y-%m-%d")
 done
