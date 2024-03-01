@@ -1,6 +1,6 @@
 #!/bin/bash
 # Start date
-start_date="2024-03-01"
+start_date="2024-05-20"
 current_date=$start_date
 last_date=$start_date
 # Loop for 365 days
