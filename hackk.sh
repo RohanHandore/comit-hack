@@ -1,10 +1,10 @@
 #!/bin/bash
 # Start date
-start_date="2024-03-01"
+start_date="2024-05-20"
 current_date=$start_date
 last_date=$start_date
 # Loop for 365 days
-for ((i=1; i<=86; i++)); do 
+for ((i=1; i<=8; i++)); do 
     # Create a file with the current date as the filename
     mv "${last_date}.txt" "$current_date.txt" || touch "$last_date.txt"; git add .
     git commit -m "updates for $current_date"
