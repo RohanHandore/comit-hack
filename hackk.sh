@@ -16,7 +16,9 @@ for (( i=1; i<=26; i++ )); do
     git commit -m "updates for $current_date"
     
     # Set the Git committer date and amend the commit
-    GIT_COMMITTER_DATE="$current_date 14:00:00" git commit --amend --no-edit --date="$current_date 14:00:00"
+    export GIT_COMMITTER_DATE="$current_date 14:00:00"
+    export GIT_AUTHOR_DATE="$current_date 14:00:00"
+    git commit --amend --no-edit --date="$current_date 14:00:00"
     
     # Move to the next day
     current_date=$(date -d "$current_date +1 day" "+%Y-%m-%d")
